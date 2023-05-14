@@ -20,7 +20,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="40dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/test_result_layout_title"
+            app:layout_constraintTop_toTopOf="@+id/test_result_tv_title"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <TextView
@@ -50,18 +50,117 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/test_result_layout_resultabout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test_result_iv_photo">
 
         <TextView
-            android:id="@+id/test_result_btn_name"
+            android:id="@+id/test_result_tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="세균 모무늬병"
             android:textSize="17sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="58dp"
-            tools:layout_editor_absoluteY="315dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/test_result_tv_def"
+            android:layout_width="300dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="16dp"
+            android:text="딸기 잎뒷면에 수침상의 다각형의 반점이 생기고 병이 진전될 경우 노란색의 세균누출액이 관찰되며 잎이 시들게 됩니다."
+            app:layout_constraintStart_toStartOf="@+id/test_result_tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/test_result_tv_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test_result_layout_resultabout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/test_result_layout_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <Button
+            android:id="@+id/test_result_btn_sym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="증상"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/test_result_btn_cause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="원인"
+            app:layout_constraintStart_toEndOf="@+id/test_result_btn_sym"
+            app:layout_constraintTop_toTopOf="@+id/test_result_btn_sym" />
+
+        <Button
+            android:id="@+id/test_result_btn_cure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="치료법"
+            app:layout_constraintStart_toEndOf="@+id/test_result_btn_cause"
+            app:layout_constraintTop_toTopOf="@+id/test_result_btn_cause" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="300dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="16dp"
+            android:text="잎의 수침상의 작은 반점이 서서히 생기면서 엽맥의 주위에 다각형의 모무늬 병반이 나타나고 노란색의 달무리가 형성됩니다. 병든잎은 서서히히 시들고 암갈색으로 말라 죽습니다. "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/test_result_btn_cause" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/test_result_layout_nextaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test_result_layout_details">
+
+        <Button
+            android:id="@+id/test_result_btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장하기"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/test_result_btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="재측정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/test_result_btn_save"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

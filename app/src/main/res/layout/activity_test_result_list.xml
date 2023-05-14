@@ -66,6 +66,20 @@
                 android:layout_marginHorizontal="24dp"
                 android:text="딸기"/>
 
+            <Button
+                android:id="@+id/test_resultlist_btn_fragment4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_weight="1"
+                android:text="토마토" />
+
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="진단 History" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
