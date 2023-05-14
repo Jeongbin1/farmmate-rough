@@ -24,7 +24,7 @@
             android:name=".PlantInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".PlantAddActivity"
+            android:name=".TestResultActivity"
             android:exported="false" />
         <activity
             android:name=".PlantListActivity"
