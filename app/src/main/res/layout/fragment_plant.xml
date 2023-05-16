@@ -5,33 +5,35 @@
     android:layout_height="match_parent"
     tools:context=".PlantFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".PlantListActivity">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/plant_list_layout_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="20dp">
 
             <TextView
-                android:id="@+id/plant_list_tv_title"
+                android:id="@+id/plant_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:text="나의 식물"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,16 +58,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plant_list_btn_edit" />
 
-        <ImageButton
-            android:id="@+id/plant_list_btn_add"
-            android:layout_width="250dp"
+<!--        <ImageButton-->
+<!--            android:id="@+id/plant_list_btn_add"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginBottom="100dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/plant_list_lv_plants"-->
+<!--            app:srcCompat="@android:drawable/ic_menu_add" />-->
+
+        <Button
+            android:id="@+id/plant_add_btn"
+            android:layout_width="150dp"
             android:layout_height="70dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plant_list_lv_plants"
-            app:srcCompat="@android:drawable/ic_menu_add" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="식물 추가하기"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
